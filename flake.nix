@@ -39,7 +39,7 @@
         defaultPackage = packages.dytra;
 
         # `nix run`
-        apps.deltashare = flake-utils.lib.mkApp { drv = packages.dytra; };
+        apps.dytra = flake-utils.lib.mkApp { drv = packages.dytra; };
         defaultApp = apps.dytra;
 
         # `nix develop`
