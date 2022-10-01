@@ -43,6 +43,6 @@
         defaultApp = apps.dytra;
 
         # `nix develop`
-        devShell = pkgs.mkShell { nativeBuildInputs = [ rust-toolchain ]; };
+        devShell = pkgs.mkShell { nativeBuildInputs = [ rust-toolchain pkgs.rust-analyzer ]; };
       });
 }
