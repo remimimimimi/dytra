@@ -30,17 +30,17 @@
       in rec {
         # `nix build`
         packages = {
-          deltashare = naersk-lib.buildPackage {
+          dytra = naersk-lib.buildPackage {
             pname = "dytra";
             root = ./.;
           };
         };
 
-        defaultPackage = packages.deltashare;
+        defaultPackage = packages.dytra;
 
         # `nix run`
-        apps.deltashare = flake-utils.lib.mkApp { drv = packages.deltashare; };
-        defaultApp = apps.deltashare;
+        apps.deltashare = flake-utils.lib.mkApp { drv = packages.dytra; };
+        defaultApp = apps.dytra;
 
         # `nix develop`
         devShell = pkgs.mkShell { nativeBuildInputs = [ rust-toolchain ]; };
